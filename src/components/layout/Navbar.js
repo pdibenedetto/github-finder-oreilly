@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
+// We don't want to use anchor tags because this is client side rendering
 const Navbar = props => {
   return (
     <nav className='navbar bg-primary'>
@@ -8,6 +10,14 @@ const Navbar = props => {
         <i className={props.icon} />
         {props.title}
       </h1>
+      <ul>
+      <li>
+          <Link to='/'>Home</Link>
+        </li>
+        <li>
+          <Link to='/about'>About</Link>
+        </li>
+      </ul>
     </nav>
   );
 };
